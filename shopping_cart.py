@@ -18,7 +18,7 @@ def add_to_cart():
   cart.append(item)
   return jsonify({"message": "Item added to cart"}), 201
 
-# Эндпоинт для очистки корзины/
+# Эндпоинт для очистки корзины/\
 @app.route("/cart", methods=['DELETE'])
 def clear_cart():
   cart.clear()
