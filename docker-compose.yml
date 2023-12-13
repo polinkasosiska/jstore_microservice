@@ -1,0 +1,16 @@
+version: '3'
+services:
+  list_products:
+    build: .
+    command: python3 ./list_products.py
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - "8000:8000"
+  shopping_cart:
+    build: .
+    command: python3 ./shopping_cart.py
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - "8001:8001" 
