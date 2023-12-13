@@ -40,7 +40,7 @@ def update_jewelry(id):
          return jsonify(item)
  return jsonify({"error": "Item not found"}), 404
 
-# Эндпоинт для удаления украшения
+# Эндпоинт для удаления украшения/
 @app.route("/jewelry/<int:id>", methods=['DELETE'])
 def delete_jewelry(id):
  for item in jewelry_items:
