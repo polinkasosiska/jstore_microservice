@@ -11,7 +11,7 @@ jobs:
         steps:
             - uses: actions/checkout@v3
             - name: Build docker image
-              run: docker build . --file Dockerfile --tag cr.yandex/${{secrets.YC_REGISTRY_ID }}/polinkasosiska:latest
+              run: docker build . --file Dockerfile --tag cr.yandex/${{secrets.YC_REGISTRY_ID }}/jstore:latest
             - name: Login to YC Registry
               uses: docker/login-action@v3.0.0
               with:
@@ -19,7 +19,7 @@ jobs:
                 username: json_key
                 password: ${{ secrets.YC_KEYS }}
             - name: Push tag to YC Registry
-              run: docker push cr.yandex/${{ secrets.YC_REGISTRY_ID }}/polinkasosiska:latest 
+              run: docker push cr.yandex/${{ secrets.YC_REGISTRY_ID }}/jstore:latest 
     deploy:
         name: Deploy
         runs-on: ubuntu-latest
@@ -31,6 +31,6 @@ jobs:
               yc-sa-json-credentials: ${{ secrets.YC_KEYS }}
               container-name: ${{ secrets.YC_CONTAINER_NAME }}
               folder-id: ${{ secrets.YC_FOLDER_ID }}
-              revision-image-url: cr.yandex/${{ secrets.YC_REGISTRY_ID }}/polinkasosiska:latest
+              revision-image-url: cr.yandex/${{ secrets.YC_REGISTRY_ID }}/jstore:latest
               revision-service-account-id: ${{ secrets.YC_SA_ID }}
               
