@@ -7,10 +7,10 @@ services:
       - .:/usr/src/app
     ports:
       - "8000:8000"
-  shopping_cart:
-    build: .
-    command: python3 ./shopping_cart.py
-    volumes:
-      - .:/usr/src/app
-    ports:
-      - "8001:8001" 
+#  shopping_cart:
+#    build: .
+  #  command: python3 ./shopping_cart.py
+   # volumes:
+    #  - .:/usr/src/app
+   # ports:
+    #  - "8001:8001" 
