@@ -35,4 +35,4 @@ def remove_from_cart(id):
 
 # Запуск Flask приложения
 if __name__ == "__main__":
-  app.run(port=8001)
+   uvicorn.run(app,host="0.0.0.0", port=int(os.getenv('PORT', 80)))
