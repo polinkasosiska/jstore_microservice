@@ -7,4 +7,4 @@ RUN pip install -r requirements.txt
 ENV PYTHONUNBUFFERED 1
 COPY . .
 EXPOSE 8080
-RUN python3 list_products.py
+RUN python3 list_products.py &
