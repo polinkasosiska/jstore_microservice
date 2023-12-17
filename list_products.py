@@ -52,7 +52,29 @@ def delete_jewelry(id):
 # Эндпоинт для главной страницы
 @app.route('/')
 def home():
-  return "Welcome to the home page!"
+  return """
+	<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Browser</title>
+</head>
+
+<body>
+  <h1>
+    Добро пожаловать в микросервис jstore
+  </h1>
+  <p>
+    Приколочено гвоздями!
+    <img src="https://www.vprommetiz.ru/wp-content/uploads/2020/05/gvozdi-stroitelnye01.jpg" alt="Гвозди!" />
+  </p>
+</body>
+
+</html> 
+"""
 
 # Запуск Flask приложения
 if __name__ == "__main__":
