@@ -68,7 +68,7 @@ def home():
     Добро пожаловать в микросервис jstore
   </h1>
   <p>
-    Приколочено гвоздями!
+    Приколочено гвоздями!!
     <img src="https://www.vprommetiz.ru/wp-content/uploads/2020/05/gvozdi-stroitelnye01.jpg" alt="Гвозди!" />
   </p>
 </body>
